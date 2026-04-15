@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Developer Portfolio</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&amp;family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sol: {
+              bg: '#002630',
+              surface: '#004153',
+              accent: '#FF8904',
+              text: '#93a1a1',
+              heading: '#eee8d5',
+              muted: '#586e75',
+              deep: '#001a22',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html, body { height: 100%; margin: 0; }
+    * { scrollbar-width: thin; scrollbar-color: #004153 #002630; }
+    .font-heading { font-family: 'Outfit', sans-serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+
+    .carousel-track { display: flex; transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+    .carousel-slide { min-width: 100%; }
+
+    .project-card { opacity: 0; transform: translateY(30px); }
+    .project-card.visible { opacity: 1; transform: translateY(0); transition: opacity 0.6s ease, transform 0.6s ease; }
+
+    .nav-btn { position: relative; overflow: hidden; }
+    .nav-btn::after {
+      content: ''; position: absolute; bottom: 0; left: 50%; width: 0; height: 2px;
+      background: #FF8904; transition: all 0.3s ease; transform: translateX(-50%);
+    }
+    .nav-btn:hover::after { width: 80%; }
+
+    .carousel-nav-btn {
+      transition: all 0.2s ease;
+    }
+    .carousel-nav-btn:hover {
+      background: #FF8904 !important;
+      color: #002630 !important;
+    }
+
+    .section-divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #FF8904 20%, #FF8904 80%, transparent);
+      opacity: 0.5;
+    }
+  </style>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full bg-sol-bg text-sol-text font-heading overflow-auto">
+  <div id="app-wrapper" class="w-full min-h-full"><!-- HEADER -->
+   <header class="sticky top-0 z-50 bg-sol-deep/90 backdrop-blur-md border-b border-sol-surface/50">
+    <div class="max-w-6xl mx-auto px-6 py-4">
+     <div class="flex flex-wrap items-start gap-4 w-full"><!-- Name Section -->
+      <div class="flex items-center gap-3 flex-shrink-0">
+       <div class="w-10 h-10 rounded-lg bg-sol-accent/20 border border-sol-accent/40 flex items-center justify-center flex-shrink-0"><i data-lucide="gamepad-2" class="w-5 h-5 text-sol-accent"></i>
+       </div>
+       <div>
+        <h1 id="header-name" class="text-sol-heading font-bold text-lg leading-tight">Your Name</h1>
+        <p id="header-title" class="text-sol-accent font-mono text-xs">Game Developer &amp; 3D Artist</p>
+       </div>
+      </div><!-- Contact Icons (between name and nav) -->
+      <div class="flex gap-2 flex-shrink-0"><a id="contact-email" href="mailto:your.email@example.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-sol-surface/50 hover:bg-sol-accent/20 border border-sol-surface/50 hover:border-sol-accent/40 flex items-center justify-center transition-all duration-200 text-sol-text hover:text-sol-accent" title="Email"> <i data-lucide="mail" class="w-4 h-4"></i> </a> <a id="contact-linkedin" href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-sol-surface/50 hover:bg-sol-accent/20 border border-sol-surface/50 hover:border-sol-accent/40 flex items-center justify-center transition-all duration-200 text-sol-text hover:text-sol-accent" title="LinkedIn"> <i data-lucide="linkedin" class="w-4 h-4"></i> </a> <a id="contact-github" href="https://github.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-sol-surface/50 hover:bg-sol-accent/20 border border-sol-surface/50 hover:border-sol-accent/40 flex items-center justify-center transition-all duration-200 text-sol-text hover:text-sol-accent" title="GitHub"> <i data-lucide="github" class="w-4 h-4"></i> </a> <a id="contact-gitlab" href="https://gitlab.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-sol-surface/50 hover:bg-sol-accent/20 border border-sol-surface/50 hover:border-sol-accent/40 flex items-center justify-center transition-all duration-200 text-sol-text hover:text-sol-accent" title="GitLab"> <i data-lucide="gitlab" class="w-4 h-4"></i> </a> <a id="contact-discord" href="https://discord.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-sol-surface/50 hover:bg-sol-accent/20 border border-sol-surface/50 hover:border-sol-accent/40 flex items-center justify-center transition-all duration-200 text-sol-text hover:text-sol-accent" title="Discord"> <i class="fab fa-discord text-sm"></i> </a>
+      </div><!-- Navigation (stays in top right, flows down on narrow) -->
+      <nav class="flex gap-1 ml-auto flex-shrink-0"><a href="#gamedev" class="nav-btn px-4 py-2 text-sm text-sol-text hover:text-sol-heading transition-colors rounded"> <span id="nav-gamedev">Game Dev</span> </a> <a href="#3dart" class="nav-btn px-4 py-2 text-sm text-sol-text hover:text-sol-heading transition-colors rounded"> <span id="nav-3d">3D Art</span> </a> <a href="#software" class="nav-btn px-4 py-2 text-sm text-sol-text hover:text-sol-heading transition-colors rounded"> <span id="nav-software">Software</span> </a>
+      </nav>
+     </div>
+    </div>
+   </header><!-- HERO -->
+   <section class="max-w-6xl mx-auto px-6 py-16 text-center">
+    <p id="hero-bio" class="text-sol-text max-w-2xl mx-auto text-base leading-relaxed">Passionate about creating immersive game experiences, detailed 3D worlds, and polished software tools.</p>
+    <div class="mt-6 flex justify-center gap-6 text-sol-muted font-mono text-xs"><span class="flex items-center gap-1.5"><i data-lucide="code-2" class="w-3.5 h-3.5"></i> C++ / C#</span> <span class="flex items-center gap-1.5"><i data-lucide="box" class="w-3.5 h-3.5"></i> Unreal / Unity</span> <span class="flex items-center gap-1.5"><i data-lucide="pen-tool" class="w-3.5 h-3.5"></i> Blender</span>
+    </div>
+   </section><!-- SECTIONS -->
+   <main class="max-w-6xl mx-auto px-6 pb-20"><!-- Section 1: Game Development -->
+    <section id="gamedev" class="scroll-mt-24 mb-20">
+     <div class="flex items-center gap-4 mb-10"><i data-lucide="gamepad-2" class="w-6 h-6 text-sol-accent"></i>
+      <h2 id="title-gamedev" class="text-sol-heading font-bold text-2xl">Game Development &amp; Design</h2>
+     </div>
+     <div class="section-divider mb-10"></div>
+     <div id="projects-gamedev" class="space-y-12"><!-- Projects injected by JS -->
+     </div>
+    </section><!-- Section 2: 3D Art -->
+    <section id="3dart" class="scroll-mt-24 mb-20">
+     <div class="flex items-center gap-4 mb-10"><i data-lucide="box" class="w-6 h-6 text-sol-accent"></i>
+      <h2 id="title-3d" class="text-sol-heading font-bold text-2xl">3D Modelling &amp; Art</h2>
+     </div>
+     <div class="section-divider mb-10"></div>
+     <div id="projects-3d" class="space-y-12">
+     </div>
+    </section><!-- Section 3: Software -->
+    <section id="software" class="scroll-mt-24 mb-20">
+     <div class="flex items-center gap-4 mb-10"><i data-lucide="terminal" class="w-6 h-6 text-sol-accent"></i>
+      <h2 id="title-software" class="text-sol-heading font-bold text-2xl">Other Software</h2>
+     </div>
+     <div class="section-divider mb-10"></div>
+     <div id="projects-software" class="space-y-12">
+     </div>
+    </section>
+   </main><!-- FOOTER -->
+   <footer class="border-t border-sol-surface/40 py-8 text-center">
+    <p class="text-sol-muted font-mono text-xs">© 2025 — Built with passion</p>
+   </footer>
+  </div>
+  <script>
+    // =============================================
+    // PROJECT DATA — Edit these arrays to add projects
+    // For images: { type: 'image', src: 'path/to/image.jpg', label: 'Label' }
+    // For YouTube videos: { type: 'youtube', videoId: 'dQw4w9WgXcQ', label: 'Label' }
+    // =============================================
+
+    const projectData = {
+      gamedev: [
+        {
+          name: "Echoes of the Void",
+          description: "A first-person survival horror game set in an abandoned space station. Built with Unreal Engine 5, featuring dynamic lighting, AI-driven enemy behavior, and a branching narrative system. Players must manage resources while uncovering the mystery of the station's crew.",
+          tags: ["Unreal Engine 5", "C++", "Horror"],
+          media: [
+            { type: 'image', src: './images/echoes-menu.jpg', label: 'Main Menu' },
+            { type: 'image', src: './images/echoes-gameplay.jpg', label: 'Gameplay' },
+            { type: 'youtube', videoId: 'dQw4w9WgXcQ', label: 'Trailer' },
+          ]
+        },
+        {
+          name: "Pixel Knights",
+          description: "A 2D roguelike with procedurally generated dungeons and real-time combat. Features over 50 unique weapons, a combo system, and online co-op for up to 4 players. Developed in Unity with custom pixel art.",
+          tags: ["Unity", "C#", "Roguelike"],
+          media: [
+            { type: 'image', src: './images/knights-combat.jpg', label: 'Combat' },
+            { type: 'image', src: './images/knights-dungeon.jpg', label: 'Dungeon' },
+          ]
+        },
+      ],
+      "3d": [
+        {
+          name: "Mech Warrior — Hard Surface Model",
+          description: "High-poly mech design created in Blender with fully rigged joints and PBR textures. Rendered in Cycles with volumetric lighting. The model contains 120k polygons with clean topology ready for game engine import.",
+          tags: ["Blender", "PBR", "Hard Surface"],
+          media: [
+            { type: 'image', src: './images/mech-front.jpg', label: 'Front View' },
+            { type: 'image', src: './images/mech-detail.jpg', label: 'Detail' },
+            { type: 'youtube', videoId: 'dQw4w9WgXcQ', label: 'Turntable' },
+          ]
+        },
+      ],
+      software: [
+        {
+          name: "LevelForge — Level Editor Tool",
+          description: "A custom node-based level editor built with C++ and ImGui. Supports drag-and-drop tile placement, layer management, and exports to multiple game engine formats. Used internally on 3 game projects.",
+          tags: ["C++", "ImGui", "Tools"],
+          media: [
+            { type: 'image', src: './images/levelforge-ui.jpg', label: 'Interface' },
+            { type: 'image', src: './images/levelforge-nodes.jpg', label: 'Node Graph' },
+          ]
+        },
+      ],
+    };
+
+    // =============================================
+    // RENDER PROJECTS
+    // =============================================
+
+    function createMediaSlide(media) {
+      const slide = document.createElement('div');
+      slide.className = 'carousel-slide flex items-center justify-center rounded-lg overflow-hidden bg-sol-deep';
+      slide.style.aspectRatio = '16/9';
+
+      if (media.type === 'image') {
+        const img = document.createElement('img');
+        img.src = media.src;
+        img.alt = media.label;
+        img.style.width = '100%';
+        img.style.height = '100%';
+        img.style.objectFit = 'cover';
+        img.onerror = () => {
+          // Fallback if image doesn't load
+          slide.innerHTML = `
+            <div class="text-center text-sol-muted">
+              <i data-lucide="image" class="w-10 h-10 mx-auto mb-2 opacity-40"></i>
+              <p class="text-xs font-mono opacity-60">${media.label}</p>
+              <p class="text-[10px] font-mono opacity-30 mt-1">Image not found: ${media.src}</p>
+            </div>
+          `;
+          lucide.createIcons();
+        };
+        slide.appendChild(img);
+      } else if (media.type === 'youtube') {
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube.com/embed/${media.videoId}`;
+        iframe.width = '100%';
+        iframe.height = '100%';
+        iframe.frameBorder = '0';
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        iframe.allowFullscreen = true;
+        iframe.style.border = 'none';
+        slide.appendChild(iframe);
+      }
+
+      return slide;
+    }
+
+    function createProjectCard(project, index) {
+      const card = document.createElement('div');
+      card.className = 'project-card flex flex-col md:flex-row gap-6 bg-sol-surface/30 rounded-xl p-5 border border-sol-surface/50';
+      card.style.transitionDelay = `${index * 0.1}s`;
+
+      const carouselId = `carousel-${Math.random().toString(36).slice(2, 9)}`;
+
+      // Create carousel track and add media slides
+      const track = document.createElement('div');
+      track.className = 'carousel-track';
+      project.media.forEach(m => {
+        track.appendChild(createMediaSlide(m));
+      });
+
+      const dots = project.media.map((_, i) => `
+        <button data-dot="${i}" class="w-2 h-2 rounded-full transition-all ${i === 0 ? 'bg-sol-accent w-4' : 'bg-sol-muted/40'}" onclick="goToSlide('${carouselId}', ${i})"></button>
+      `).join('');
+
+      const tags = project.tags.map(t => `<span class="px-2 py-0.5 text-[10px] font-mono rounded border border-sol-accent/30 text-sol-accent/80">${t}</span>`).join('');
+
+      // Build carousel container
+      const carouselContainer = document.createElement('div');
+      carouselContainer.id = carouselId;
+      carouselContainer.className = 'relative overflow-hidden rounded-lg';
+      carouselContainer.appendChild(track);
+
+      // Add navigation buttons if multiple media items
+      if (project.media.length > 1) {
+        const btnLeft = document.createElement('button');
+        btnLeft.className = 'carousel-nav-btn absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-sol-deep/70 text-sol-text flex items-center justify-center';
+        btnLeft.onclick = () => moveCarousel(carouselId, -1);
+        btnLeft.innerHTML = '<i data-lucide="chevron-left" class="w-4 h-4"></i>';
+        carouselContainer.appendChild(btnLeft);
+
+        const btnRight = document.createElement('button');
+        btnRight.className = 'carousel-nav-btn absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-sol-deep/70 text-sol-text flex items-center justify-center';
+        btnRight.onclick = () => moveCarousel(carouselId, 1);
+        btnRight.innerHTML = '<i data-lucide="chevron-right" class="w-4 h-4"></i>';
+        carouselContainer.appendChild(btnRight);
+
+        const dotsContainer = document.createElement('div');
+        dotsContainer.className = 'absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5';
+        dotsContainer.innerHTML = dots;
+        carouselContainer.appendChild(dotsContainer);
+      }
+
+      // Build content section
+      const contentDiv = document.createElement('div');
+      contentDiv.className = 'md:w-1/2 flex flex-col justify-center';
+      contentDiv.innerHTML = `
+        <div class="flex flex-wrap gap-1.5 mb-3">${tags}</div>
+        <h3 class="text-sol-heading font-bold text-xl mb-3">${project.name}</h3>
+        <p class="text-sol-text text-sm leading-relaxed">${project.description}</p>
+      `;
+
+      // Build media container
+      const mediaDiv = document.createElement('div');
+      mediaDiv.className = 'md:w-1/2 flex-shrink-0';
+      mediaDiv.appendChild(carouselContainer);
+
+      // Add to card
+      card.appendChild(mediaDiv);
+      card.appendChild(contentDiv);
+
+      return card;
+    }
+
+    // Carousel state
+    const carouselStates = {};
+
+    window.goToSlide = function(id, index) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const track = el.querySelector('.carousel-track');
+      const total = track.children.length;
+      if (index < 0 || index >= total) return;
+      carouselStates[id] = index;
+      track.style.transform = `translateX(-${index * 100}%)`;
+      el.querySelectorAll('[data-dot]').forEach(d => {
+        const di = parseInt(d.dataset.dot);
+        d.className = `w-${di === index ? '4' : '2'} h-2 rounded-full transition-all ${di === index ? 'bg-sol-accent' : 'bg-sol-muted/40'}`;
+      });
+    };
+
+    window.moveCarousel = function(id, dir) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const total = el.querySelector('.carousel-track').children.length;
+      const current = carouselStates[id] || 0;
+      const next = (current + dir + total) % total;
+      goToSlide(id, next);
+    };
+
+    function renderAllProjects() {
+      ['gamedev', '3d', 'software'].forEach(key => {
+        const containerId = key === '3d' ? 'projects-3d' : key === 'software' ? 'projects-software' : 'projects-gamedev';
+        const container = document.getElementById(containerId);
+        container.innerHTML = '';
+        (projectData[key] || []).forEach((p, i) => {
+          container.appendChild(createProjectCard(p, i));
+        });
+      });
+      lucide.createIcons();
+      observeCards();
+    }
+
+    // Intersection observer for fade-in
+    function observeCards() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.project-card').forEach(c => observer.observe(c));
+    }
+
+    // =============================================
+    // ELEMENT SDK
+    // =============================================
+
+    const defaultConfig = {
+      developer_name: 'Your Name',
+      developer_title: 'Game Developer & 3D Artist',
+      developer_bio: 'Passionate about creating immersive game experiences, detailed 3D worlds, and polished software tools.',
+      contact_email: 'your.email@example.com',
+      contact_linkedin: 'https://linkedin.com/in/yourprofile',
+      contact_github: 'https://github.com/yourprofile',
+      contact_gitlab: 'https://gitlab.com/yourprofile',
+      contact_discord: 'YourUsername#1234',
+      section_gamedev: 'Game Development & Design',
+      section_3d: '3D Modelling & Art',
+      section_software: 'Other Software',
+      background_color: '#002630',
+      surface_color: '#004153',
+      text_color: '#93a1a1',
+      accent_color: '#FF8904',
+      heading_color: '#eee8d5',
+      font_family: 'Outfit',
+      font_size: 16,
+    };
+
+    async function onConfigChange(config) {
+      const c = { ...defaultConfig, ...config };
+      const $ = id => document.getElementById(id);
+
+      $('header-name').textContent = c.developer_name;
+      $('header-title').textContent = c.developer_title;
+      $('hero-bio').textContent = c.developer_bio;
+      $('title-gamedev').textContent = c.section_gamedev;
+      $('title-3d').textContent = c.section_3d;
+      $('title-software').textContent = c.section_software;
+      $('nav-gamedev').textContent = c.section_gamedev.split('&')[0].trim().split(' ').slice(0,2).join(' ') || 'Game Dev';
+      $('nav-3d').textContent = c.section_3d.split('&')[0].trim().split(' ').slice(0,2).join(' ') || '3D Art';
+      $('nav-software').textContent = c.section_software.split('&')[0].trim().split(' ').slice(0,2).join(' ') || 'Software';
+
+      // Contact links
+      const emailVal = c.contact_email || defaultConfig.contact_email;
+      $('contact-email').href = `mailto:${emailVal}`;
+      $('contact-linkedin').href = c.contact_linkedin || defaultConfig.contact_linkedin;
+      $('contact-github').href = c.contact_github || defaultConfig.contact_github;
+      $('contact-gitlab').href = c.contact_gitlab || defaultConfig.contact_gitlab;
+      const discordVal = c.contact_discord || defaultConfig.contact_discord;
+      $('contact-discord').href = discordVal.includes('http') ? discordVal : `https://discord.com/users/${discordVal}`;
+
+      // Colors
+      document.body.style.backgroundColor = c.background_color;
+      document.querySelectorAll('.section-divider').forEach(el => {
+        el.style.background = `linear-gradient(90deg, transparent, ${c.accent_color} 20%, ${c.accent_color} 80%, transparent)`;
+      });
+
+      // Font
+      const font = c.font_family || defaultConfig.font_family;
+      document.body.style.fontFamily = `${font}, Outfit, sans-serif`;
+
+      const base = c.font_size || defaultConfig.font_size;
+      $('hero-bio').style.fontSize = `${base}px`;
+      document.querySelectorAll('h2').forEach(el => el.style.fontSize = `${base * 1.5}px`);
+      document.querySelectorAll('h3').forEach(el => el.style.fontSize = `${base * 1.25}px`);
+    }
+
+    function makeColorMutable(key) {
+      return {
+        get: () => (window.elementSdk?.config?.[key]) || defaultConfig[key],
+        set: (v) => { window.elementSdk?.setConfig({ [key]: v }); }
+      };
+    }
+
+    window.elementSdk?.init({
+      defaultConfig,
+      onConfigChange,
+      mapToCapabilities: (config) => ({
+        recolorables: [
+          makeColorMutable('background_color'),
+          makeColorMutable('surface_color'),
+          makeColorMutable('text_color'),
+          makeColorMutable('accent_color'),
+          makeColorMutable('heading_color'),
+        ],
+        borderables: [],
+        fontEditable: {
+          get: () => config.font_family || defaultConfig.font_family,
+          set: (v) => { window.elementSdk?.setConfig({ font_family: v }); }
+        },
+        fontSizeable: {
+          get: () => config.font_size || defaultConfig.font_size,
+          set: (v) => { window.elementSdk?.setConfig({ font_size: v }); }
+        },
+      }),
+      mapToEditPanelValues: (config) => new Map([
+        ['developer_name', config.developer_name || defaultConfig.developer_name],
+        ['developer_title', config.developer_title || defaultConfig.developer_title],
+        ['developer_bio', config.developer_bio || defaultConfig.developer_bio],
+        ['contact_email', config.contact_email || defaultConfig.contact_email],
+        ['contact_linkedin', config.contact_linkedin || defaultConfig.contact_linkedin],
+        ['contact_github', config.contact_github || defaultConfig.contact_github],
+        ['contact_gitlab', config.contact_gitlab || defaultConfig.contact_gitlab],
+        ['contact_discord', config.contact_discord || defaultConfig.contact_discord],
+        ['section_gamedev', config.section_gamedev || defaultConfig.section_gamedev],
+        ['section_3d', config.section_3d || defaultConfig.section_3d],
+        ['section_software', config.section_software || defaultConfig.section_software],
+      ]),
+    });
+
+    // Initial render
+    renderAllProjects();
+    onConfigChange(defaultConfig);
+    lucide.createIcons();
