@@ -63,7 +63,7 @@ const projectData = {
     },
     {
       name: "Funky Goblin — Model a character head",
-      description: "A simple model I made for an assignment. The goal was to choose an object somewhere in the real world, gather reference images of it, and model it accurately according to the references. I used polygonal modelling for building the mesh, and very simple materials to get a similar look to the real one.",
+      description: "This was my first experience with sculpting and texture painting. The model was for an assignment for an advanced course focused on the entire process of designing, modelling, texturing and presenting one's own character. I made the eye materials using Blender nodes, the hair with particle systems, and the skin and scar textures in Substance Painter. I am now working on another character for a full body project, where I hope to learn from this one, and sculpt the mesh more properly for a better topology.",
       tags: ["Blender", "Sculpting", "Texture painting", "Substance Painter", "Character Design"],
       media: [
         { type: 'image', src: 'assets/Blender/Goblin/1.png', label: 'Front View' },
@@ -78,12 +78,46 @@ const projectData = {
         { type: 'image', src: 'assets/Blender/Goblin/10.png', label: 'Front View' },
       ]
     },
+    {
+      name: "Hexblade — Model a robotic character",
+      description: "A multi-part mechanical model that I created for an assignment with the goal of designing, modelling, and texturing a robotic character. The idea was to aim for some kind of robotic guard/warrior, which has an idle state and an alerted state. All the parts of the robot were designed with the movement of the whole contraption in mind. The model is not constrained, but the joints can simulate realistic bending and if animated, the movement of the robot would look fine. I made all the materials in Blender nodes.",
+      tags: ["Blender", "Polygonal Modelling", "Procedural materials", "Robot", "Character Design"],
+      media: [
+        { type: 'image', src: 'assets/Blender/Goblin/1.png', label: 'Front View' },
+      ]
+    },
+    {
+      name: "Alarak's Artifact — Make an animation",
+      description: "The aim of this assignment was to create an animated story. I chose to design a minimalistic futuristic temple with a mysterious artifact hovering in the middle of the room. I used particle systems to create the animated pillars in the room. The hand was not modelled or painted by me, but I modified it with a capturing device for the artifact and fully rigged it to prepare it for the animation.",
+      tags: ["Blender", "Polygonal Modelling", "Animation", "Environment Design", "Model Rigging"],
+      media: [
+        { type: 'image', src: 'assets/Blender/Goblin/1.png', label: 'Front View' },
+      ]
+    },
   ],
   software: [
     {
-      name: "LevelForge — Level Editor Tool",
-      description: "A custom node-based level editor built with C++ and ImGui. Supports drag-and-drop tile placement, layer management, and exports to multiple game engine formats. Used internally on 3 game projects.",
-      tags: ["C++", "ImGui", "Tools"],
+      name: "Bachelor Thesis - Interactive 2D Scene Drawing and Lighting with Global Illumination",
+      description: "An application which allows the user to draw shapes with different properties, such as lights, walls and transparent objects, into a 2D scene. The application computes real-time global illumination for the dynamic 2D scene utilising its own rendering engine based on OpenGL. In order to compute global illumination, the Path Tracing algorithm is used together with several optimisation techniques. The Digital Differential Analyzer (DDA) algorithm is used to sample the scene during tracing and a Distance Map is utilised to skip over empty pixels. The application also offers a graphical user interface which allows: the setting of drawing and rendering related properties, accessing different visualisation modes, and saving/loading drawn scenes as images.",
+      tags: ["C++", "ImGui", "OpenGL", "GLSL", "Path Tracing", "Global Illumination", "Drawing", "Real-time lighting"],
+      media: [
+        { type: 'image', color: '#0b2b3b', label: 'Interface' },
+        { type: 'image', color: '#162636', label: 'Node Graph' },
+      ]
+    },
+    {
+      name: "Mystic Land - Walkable first person 3D scene showcasing various CG techniques",
+      description: "An application which allows the user to draw shapes with different properties, such as lights, walls and transparent objects, into a 2D scene. The application computes real-time global illumination for the dynamic 2D scene utilising its own rendering engine based on OpenGL. In order to compute global illumination, the Path Tracing algorithm is used together with several optimisation techniques. The Digital Differential Analyzer (DDA) algorithm is used to sample the scene during tracing and a Distance Map is utilised to skip over empty pixels. The application also offers a graphical user interface which allows: the setting of drawing and rendering related properties, accessing different visualisation modes, and saving/loading drawn scenes as images.",
+      tags: ["C++", "OpenGL", "GLSL", "Environmental Mapping", "Low-level"],
+      media: [
+        { type: 'image', color: '#0b2b3b', label: 'Interface' },
+        { type: 'image', color: '#162636', label: 'Node Graph' },
+      ]
+    },
+    {
+      name: "Recipe Browser - A simple full-stack application made using C# and WPF",
+      description: "An application which allows the user to draw shapes with different properties, such as lights, walls and transparent objects, into a 2D scene. The application computes real-time global illumination for the dynamic 2D scene utilising its own rendering engine based on OpenGL. In order to compute global illumination, the Path Tracing algorithm is used together with several optimisation techniques. The Digital Differential Analyzer (DDA) algorithm is used to sample the scene during tracing and a Distance Map is utilised to skip over empty pixels. The application also offers a graphical user interface which allows: the setting of drawing and rendering related properties, accessing different visualisation modes, and saving/loading drawn scenes as images.",
+      tags: ["C#", "WPF", "Full-stack", "Database setup"],
       media: [
         { type: 'image', color: '#0b2b3b', label: 'Interface' },
         { type: 'image', color: '#162636', label: 'Node Graph' },
