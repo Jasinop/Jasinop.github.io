@@ -61,6 +61,23 @@ const projectData = {
         { type: 'image', src: 'assets/Blender/Coffee Mill/9.png', label: 'Front View' },
       ]
     },
+    {
+      name: "Funky Goblin — Model a character head",
+      description: "A simple model I made for an assignment. The goal was to choose an object somewhere in the real world, gather reference images of it, and model it accurately according to the references. I used polygonal modelling for building the mesh, and very simple materials to get a similar look to the real one.",
+      tags: ["Blender", "Sculpting", "Texture painting", "Substance Painter", "Character Design"],
+      media: [
+        { type: 'image', src: 'assets/Blender/Goblin/1.png', label: 'Front View' },
+        { type: 'image', src: 'assets/Blender/Goblin/2.png', label: 'Front View' },
+        { type: 'image', src: 'assets/Blender/Goblin/3.png', label: 'Front View' },
+        { type: 'image', src: 'assets/Blender/Goblin/4.png', label: 'Front View' },
+        { type: 'image', src: 'assets/Blender/Goblin/5.png', label: 'Front View' },
+        { type: 'image', src: 'assets/Blender/Goblin/6.png', label: 'Front View' },
+        { type: 'image', src: 'assets/Blender/Goblin/7.png', label: 'Front View' },
+        { type: 'image', src: 'assets/Blender/Goblin/8.png', label: 'Front View' },
+        { type: 'image', src: 'assets/Blender/Goblin/9.png', label: 'Front View' },
+        { type: 'image', src: 'assets/Blender/Goblin/10.png', label: 'Front View' },
+      ]
+    },
   ],
   software: [
     {
