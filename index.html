@@ -32,27 +32,37 @@
   
  </head>
 
- <body class="h-full bg-sol-bg text-sol-text font-heading overflow-auto">
+ <body class="h-full bg-sol-bg text-sol-text font-heading overflow-x-hidden">
   <div id="app-wrapper" class="w-full min-h-full">
    <!-- HEADER -->
    <header class="sticky top-0 z-50 bg-sol-deep/90 backdrop-blur-md border-b border-sol-surface/50">
     <div class="max-w-6xl mx-auto px-6 py-4">
-     <div class="flex flex-wrap items-start gap-4 w-full">
+     <div class="flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-4 w-full min-w-0">
       <!-- Name Section -->
       <div class="flex items-center gap-3 flex-shrink-0">
        <div class="w-10 h-10 rounded-lg bg-sol-accent/20 border border-sol-accent/40 flex items-center justify-center flex-shrink-0">
         <i data-lucide="gamepad-2" class="w-5 h-5 text-sol-accent"></i>
        </div>
-       <div>
-        <h1 id="header-name" class="text-sol-heading font-bold text-lg leading-tight">Your Name</h1>
-        <p id="header-title" class="text-sol-accent font-mono text-xs">Game Developer &amp; 3D Artist</p>
-       </div>
+       <div class="min-w-0">
+        <h1 id="header-name" class="text-sol-heading font-bold text-lg leading-tight truncate">Your Name</h1>
+        <p id="header-title" class="text-sol-accent font-mono text-xs truncate">Game Developer & 3D Artist</p>
+      </div>
       </div><!-- Contact Icons (between name and nav) -->
       <div class="flex gap-2 flex-shrink-0">
        <a id="contact-email" href="mailto:your.email@example.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-sol-surface/50 hover:bg-sol-accent/20 border border-sol-surface/50 hover:border-sol-accent/40 flex items-center justify-center transition-all duration-200 text-sol-text hover:text-sol-accent" title="Email"> <i data-lucide="mail" class="w-4 h-4"></i> </a> <a id="contact-linkedin" href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-sol-surface/50 hover:bg-sol-accent/20 border border-sol-surface/50 hover:border-sol-accent/40 flex items-center justify-center transition-all duration-200 text-sol-text hover:text-sol-accent" title="LinkedIn"> <i data-lucide="linkedin" class="w-4 h-4"></i> </a> <a id="contact-github" href="https://github.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-sol-surface/50 hover:bg-sol-accent/20 border border-sol-surface/50 hover:border-sol-accent/40 flex items-center justify-center transition-all duration-200 text-sol-text hover:text-sol-accent" title="GitHub"> <i data-lucide="github" class="w-4 h-4"></i> </a> <a id="contact-gitlab" href="https://gitlab.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-sol-surface/50 hover:bg-sol-accent/20 border border-sol-surface/50 hover:border-sol-accent/40 flex items-center justify-center transition-all duration-200 text-sol-text hover:text-sol-accent" title="GitLab"> <i data-lucide="gitlab" class="w-4 h-4"></i> </a> <a id="contact-discord" href="https://discord.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-sol-surface/50 hover:bg-sol-accent/20 border border-sol-surface/50 hover:border-sol-accent/40 flex items-center justify-center transition-all duration-200 text-sol-text hover:text-sol-accent" title="Discord"> <i class="fab fa-discord text-sm"></i> </a>
       </div><!-- Navigation (stays in top right, flows down on narrow) -->
-      <nav class="flex gap-1 ml-auto flex-shrink-0">
-       <a href="#gamedev" class="nav-btn px-4 py-2 text-sm text-sol-text hover:text-sol-heading transition-colors rounded"> <span id="nav-gamedev">Game Dev</span> </a> <a href="#3dart" class="nav-btn px-4 py-2 text-sm text-sol-text hover:text-sol-heading transition-colors rounded"> <span id="nav-3d">3D Art</span> </a> <a href="#software" class="nav-btn px-4 py-2 text-sm text-sol-text hover:text-sol-heading transition-colors rounded"> <span id="nav-software">Software</span> </a>
+      <nav class="flex flex-wrap gap-1 ml-auto w-full sm:w-auto">
+        <a href="#gamedev" class="nav-btn flex flex-1 sm:flex-none items-center justify-center text-center px-4 py-2 text-sm text-sol-text hover:text-sol-heading transition-colors rounded">
+          <span id="nav-gamedev">Game Dev</span>
+        </a>
+
+        <a href="#3dart" class="nav-btn flex flex-1 sm:flex-none items-center justify-center text-center px-4 py-2 text-sm text-sol-text hover:text-sol-heading transition-colors rounded">
+          <span id="nav-3d">3D Art</span>
+        </a>
+
+        <a href="#software" class="nav-btn flex flex-1 sm:flex-none items-center justify-center text-center px-4 py-2 text-sm text-sol-text hover:text-sol-heading transition-colors rounded">
+          <span id="nav-software">Software</span>
+        </a>
       </nav>
      </div>
     </div>
