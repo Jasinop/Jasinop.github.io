@@ -7,7 +7,7 @@
 const projectData = {
   gamedev: [
     {
-      name: "Swift Wind",
+      name: "Swift Wind - WIP",
       description: "Fast-paced 2D action platformer game, where players must complete objectives as quickly as possible and try to optimize every level. Set in Japanese fantasy Sengoku period (1467 - 1603) you take on the role of a samurai wielding the cursed sword Swift Wind, who must fulfill his quest to lift the curse that binds him to the sword.",
       tags: ["Unity", "C#", "Action", "Platformer", "Speedrunning", "Team Project"],
       media: [
@@ -32,10 +32,11 @@ const projectData = {
       media: [
         { type: 'image', color: '#1a2a3a', label: 'Combat' },
         { type: 'image', color: '#0f3545', label: 'Dungeon' },
-      ]
+      ],
+      downloadUrl: 'https://github.com/Jasinop/Frenzypede/tree/playtest-print'
     },
     {
-      name: "Lost in Minds",
+      name: "Lost in Minds - WIP",
       description: "Memory game, where you play as a forgetful dwarf moving through the hexagonal mines, looking for rare gem-pairs to dig up, finding helpful equipment on the way and lighting up important places you visited with a torch to not forget your path. You compete with other dwarfs to find the most gems by getting to the gem-pairs first and stealing partially claimed gems from your opponents. Make sure you don’t get lost by forgetting which tiles you explored, and don’t be afraid to confuse your opponents by lying about the layout of the mines.",
       tags: ["Board Game", "nanDeck", "Memory", "Team Project"],
       media: [
@@ -83,15 +84,25 @@ const projectData = {
       description: "A multi-part mechanical model that I created for an assignment with the goal of designing, modelling, and texturing a robotic character. The idea was to aim for some kind of robotic guard/warrior, which has an idle state and an alerted state. All the parts of the robot were designed with the movement of the whole contraption in mind. The model is not constrained, but the joints can simulate realistic bending and if animated, the movement of the robot would look fine. I made all the materials in Blender nodes.",
       tags: ["Blender", "Polygonal Modelling", "Procedural materials", "Robot", "Character Design"],
       media: [
-        { type: 'image', src: 'assets/Blender/Goblin/1.png', label: 'Front View' },
+        { type: 'youtube', videoId: 'nqVq-6KmrDE', label: 'Front View' },
+        { type: 'image', src: 'assets/Blender/Robot/1.png', label: 'Front View' },
+        { type: 'image', src: 'assets/Blender/Robot/2.png', label: 'Front View' },
+        { type: 'image', src: 'assets/Blender/Robot/3.png', label: 'Front View' },
+        { type: 'image', src: 'assets/Blender/Robot/4.png', label: 'Front View' },
+        { type: 'image', src: 'assets/Blender/Robot/5.png', label: 'Front View' },
       ]
     },
     {
-      name: "Alarak's Artifact — Make an animation",
+      name: "Temple Heist — Make an animation",
       description: "The aim of this assignment was to create an animated story. I chose to design a minimalistic futuristic temple with a mysterious artifact hovering in the middle of the room. I used particle systems to create the animated pillars in the room. The hand was not modelled or painted by me, but I modified it with a capturing device for the artifact and fully rigged it to prepare it for the animation.",
       tags: ["Blender", "Polygonal Modelling", "Animation", "Environment Design", "Model Rigging"],
       media: [
-        { type: 'image', src: 'assets/Blender/Goblin/1.png', label: 'Front View' },
+        { type: 'youtube', videoId: 'J2IIZ8ItM7Q', label: 'Front View' },
+        { type: 'image', src: 'assets/Blender/Anim/1.png', label: 'Front View' },
+        { type: 'image', src: 'assets/Blender/Anim/2.png', label: 'Front View' },
+        { type: 'image', src: 'assets/Blender/Anim/3.png', label: 'Front View' },
+        { type: 'image', src: 'assets/Blender/Anim/4.png', label: 'Front View' },
+        { type: 'image', src: 'assets/Blender/Anim/5.png', label: 'Front View' },
       ]
     },
   ],
@@ -101,9 +112,14 @@ const projectData = {
       description: "An application which allows the user to draw shapes with different properties, such as lights, walls and transparent objects, into a 2D scene. The application computes real-time global illumination for the dynamic 2D scene utilising its own rendering engine based on OpenGL. In order to compute global illumination, the Path Tracing algorithm is used together with several optimisation techniques. The Digital Differential Analyzer (DDA) algorithm is used to sample the scene during tracing and a Distance Map is utilised to skip over empty pixels. The application also offers a graphical user interface which allows: the setting of drawing and rendering related properties, accessing different visualisation modes, and saving/loading drawn scenes as images.",
       tags: ["C++", "ImGui", "OpenGL", "GLSL", "Path Tracing", "Global Illumination", "Drawing", "Real-time lighting"],
       media: [
-        { type: 'image', color: '#0b2b3b', label: 'Interface' },
-        { type: 'image', color: '#162636', label: 'Node Graph' },
-      ]
+        { type: 'youtube', videoId: 'GbpzxVkxuvQ', label: 'Front View' },
+        { type: 'image', src: 'assets/Other/Thesis/1.png', label: 'Interface' },
+        { type: 'image', src: 'assets/Other/Thesis/2.png', label: 'Interface' },
+        { type: 'image', src: 'assets/Other/Thesis/3.png', label: 'Interface' },
+        { type: 'image', src: 'assets/Other/Thesis/4.png', label: 'Interface' },
+        { type: 'image', src: 'assets/Other/Thesis/5.png', label: 'Interface' },
+      ],
+      downloadUrl: 'https://is.muni.cz/th/g0ajr/'
     },
     {
       name: "Mystic Land - Walkable first person 3D scene showcasing various CG techniques",
@@ -219,7 +235,14 @@ function createProjectCard(project, index) {
   const contentDiv = document.createElement('div');
   contentDiv.className = 'md:w-1/2 flex flex-col justify-center';
   contentDiv.innerHTML = `
-    <div class="flex flex-wrap gap-1.5 mb-3">${tags}</div>
+    <div class="flex items-start justify-between gap-4 mb-3">
+      <div class="flex flex-wrap gap-1.5">${tags}</div>
+      ${project.downloadUrl ? `
+        <a href="${project.downloadUrl}" target="_blank" rel="noopener noreferrer" class="flex-shrink-0 w-8 h-8 rounded-lg bg-sol-surface/50 hover:bg-sol-accent/20 border border-sol-surface/50 hover:border-sol-accent/40 flex items-center justify-center transition-all duration-200 text-sol-text hover:text-sol-accent" title="Download">
+          <i data-lucide="download" class="w-4 h-4"></i>
+        </a>
+      ` : ''}
+    </div>
     <h3 class="text-sol-heading font-bold text-xl mb-3">${project.name}</h3>
     <p class="text-sol-text text-sm leading-relaxed">${project.description}</p>
   `;
@@ -290,7 +313,7 @@ function observeCards() {
 const defaultConfig = {
   developer_name: 'Patrik Jašo',
   developer_title: 'Game Developer & 3D Artist',
-  developer_bio: 'Passionate about creating immersive game experiences, detailed 3D worlds, and polished software tools.',
+  developer_bio: '“Great results, can be achieved with small forces.” ― Sun Tzu, The Art of War',
   contact_email: 'pjasinop@gmail.com',
   contact_linkedin: 'https://www.linkedin.com/in/patrik-ja%C5%A1o-557150397/',
   contact_github: 'https://github.com/Jasinop',

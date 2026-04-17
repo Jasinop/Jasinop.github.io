@@ -65,41 +65,51 @@
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
  </head>
  <body class="h-full bg-sol-bg text-sol-text font-heading overflow-auto">
-  <div id="app-wrapper" class="w-full min-h-full"><!-- HEADER -->
+  <div id="app-wrapper" class="w-full min-h-full">
+   <!-- HEADER -->
    <header class="sticky top-0 z-50 bg-sol-deep/90 backdrop-blur-md border-b border-sol-surface/50">
     <div class="max-w-6xl mx-auto px-6 py-4">
-     <div class="flex flex-wrap items-start gap-4 w-full"><!-- Name Section -->
+     <div class="flex flex-wrap items-start gap-4 w-full">
+      <!-- Name Section -->
       <div class="flex items-center gap-3 flex-shrink-0">
-       <div class="w-10 h-10 rounded-lg bg-sol-accent/20 border border-sol-accent/40 flex items-center justify-center flex-shrink-0"><i data-lucide="gamepad-2" class="w-5 h-5 text-sol-accent"></i>
+       <div class="w-10 h-10 rounded-lg bg-sol-accent/20 border border-sol-accent/40 flex items-center justify-center flex-shrink-0">
+        <i data-lucide="gamepad-2" class="w-5 h-5 text-sol-accent"></i>
        </div>
        <div>
         <h1 id="header-name" class="text-sol-heading font-bold text-lg leading-tight">Your Name</h1>
         <p id="header-title" class="text-sol-accent font-mono text-xs">Game Developer &amp; 3D Artist</p>
        </div>
       </div><!-- Contact Icons (between name and nav) -->
-      <div class="flex gap-2 flex-shrink-0"><a id="contact-email" href="mailto:your.email@example.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-sol-surface/50 hover:bg-sol-accent/20 border border-sol-surface/50 hover:border-sol-accent/40 flex items-center justify-center transition-all duration-200 text-sol-text hover:text-sol-accent" title="Email"> <i data-lucide="mail" class="w-4 h-4"></i> </a> <a id="contact-linkedin" href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-sol-surface/50 hover:bg-sol-accent/20 border border-sol-surface/50 hover:border-sol-accent/40 flex items-center justify-center transition-all duration-200 text-sol-text hover:text-sol-accent" title="LinkedIn"> <i data-lucide="linkedin" class="w-4 h-4"></i> </a> <a id="contact-github" href="https://github.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-sol-surface/50 hover:bg-sol-accent/20 border border-sol-surface/50 hover:border-sol-accent/40 flex items-center justify-center transition-all duration-200 text-sol-text hover:text-sol-accent" title="GitHub"> <i data-lucide="github" class="w-4 h-4"></i> </a> <a id="contact-gitlab" href="https://gitlab.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-sol-surface/50 hover:bg-sol-accent/20 border border-sol-surface/50 hover:border-sol-accent/40 flex items-center justify-center transition-all duration-200 text-sol-text hover:text-sol-accent" title="GitLab"> <i data-lucide="gitlab" class="w-4 h-4"></i> </a> <a id="contact-discord" href="https://discord.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-sol-surface/50 hover:bg-sol-accent/20 border border-sol-surface/50 hover:border-sol-accent/40 flex items-center justify-center transition-all duration-200 text-sol-text hover:text-sol-accent" title="Discord"> <i class="fab fa-discord text-sm"></i> </a>
+      <div class="flex gap-2 flex-shrink-0">
+       <a id="contact-email" href="mailto:your.email@example.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-sol-surface/50 hover:bg-sol-accent/20 border border-sol-surface/50 hover:border-sol-accent/40 flex items-center justify-center transition-all duration-200 text-sol-text hover:text-sol-accent" title="Email"> <i data-lucide="mail" class="w-4 h-4"></i> </a> <a id="contact-linkedin" href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-sol-surface/50 hover:bg-sol-accent/20 border border-sol-surface/50 hover:border-sol-accent/40 flex items-center justify-center transition-all duration-200 text-sol-text hover:text-sol-accent" title="LinkedIn"> <i data-lucide="linkedin" class="w-4 h-4"></i> </a> <a id="contact-github" href="https://github.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-sol-surface/50 hover:bg-sol-accent/20 border border-sol-surface/50 hover:border-sol-accent/40 flex items-center justify-center transition-all duration-200 text-sol-text hover:text-sol-accent" title="GitHub"> <i data-lucide="github" class="w-4 h-4"></i> </a> <a id="contact-gitlab" href="https://gitlab.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-sol-surface/50 hover:bg-sol-accent/20 border border-sol-surface/50 hover:border-sol-accent/40 flex items-center justify-center transition-all duration-200 text-sol-text hover:text-sol-accent" title="GitLab"> <i data-lucide="gitlab" class="w-4 h-4"></i> </a> <a id="contact-discord" href="https://discord.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-sol-surface/50 hover:bg-sol-accent/20 border border-sol-surface/50 hover:border-sol-accent/40 flex items-center justify-center transition-all duration-200 text-sol-text hover:text-sol-accent" title="Discord"> <i class="fab fa-discord text-sm"></i> </a>
       </div><!-- Navigation (stays in top right, flows down on narrow) -->
-      <nav class="flex gap-1 ml-auto flex-shrink-0"><a href="#gamedev" class="nav-btn px-4 py-2 text-sm text-sol-text hover:text-sol-heading transition-colors rounded"> <span id="nav-gamedev">Game Dev</span> </a> <a href="#3dart" class="nav-btn px-4 py-2 text-sm text-sol-text hover:text-sol-heading transition-colors rounded"> <span id="nav-3d">3D Art</span> </a> <a href="#software" class="nav-btn px-4 py-2 text-sm text-sol-text hover:text-sol-heading transition-colors rounded"> <span id="nav-software">Software</span> </a>
+      <nav class="flex gap-1 ml-auto flex-shrink-0">
+       <a href="#gamedev" class="nav-btn px-4 py-2 text-sm text-sol-text hover:text-sol-heading transition-colors rounded"> <span id="nav-gamedev">Game Dev</span> </a> <a href="#3dart" class="nav-btn px-4 py-2 text-sm text-sol-text hover:text-sol-heading transition-colors rounded"> <span id="nav-3d">3D Art</span> </a> <a href="#software" class="nav-btn px-4 py-2 text-sm text-sol-text hover:text-sol-heading transition-colors rounded"> <span id="nav-software">Software</span> </a>
       </nav>
      </div>
     </div>
    </header><!-- HERO -->
    <section class="max-w-6xl mx-auto px-6 py-16 text-center">
     <p id="hero-bio" class="text-sol-text max-w-2xl mx-auto text-base leading-relaxed">Passionate about creating immersive game experiences, detailed 3D worlds, and polished software tools.</p>
-    <div class="mt-6 flex justify-center gap-6 text-sol-muted font-mono text-xs"><span class="flex items-center gap-1.5"><i data-lucide="code-2" class="w-3.5 h-3.5"></i> C++ / C#</span> <span class="flex items-center gap-1.5"><i data-lucide="box" class="w-3.5 h-3.5"></i> Unreal / Unity</span> <span class="flex items-center gap-1.5"><i data-lucide="pen-tool" class="w-3.5 h-3.5"></i> Blender</span>
+    <div class="mt-6 flex justify-center gap-6 text-sol-muted font-mono text-xs">
+     <span class="flex items-center gap-1.5"><i data-lucide="code-2" class="w-3.5 h-3.5"></i> C++ / C#</span> <span class="flex items-center gap-1.5"><i data-lucide="box" class="w-3.5 h-3.5"></i> Unreal / Unity</span> <span class="flex items-center gap-1.5"><i data-lucide="pen-tool" class="w-3.5 h-3.5"></i> Blender</span>
     </div>
    </section><!-- SECTIONS -->
-   <main class="max-w-6xl mx-auto px-6 pb-20"><!-- Section 1: Game Development -->
+   <main class="max-w-6xl mx-auto px-6 pb-20">
+    <!-- Section 1: Game Development -->
     <section id="gamedev" class="scroll-mt-24 mb-20">
-     <div class="flex items-center gap-4 mb-10"><i data-lucide="gamepad-2" class="w-6 h-6 text-sol-accent"></i>
+     <div class="flex items-center gap-4 mb-10">
+      <i data-lucide="gamepad-2" class="w-6 h-6 text-sol-accent"></i>
       <h2 id="title-gamedev" class="text-sol-heading font-bold text-2xl">Game Development &amp; Design</h2>
      </div>
      <div class="section-divider mb-10"></div>
-     <div id="projects-gamedev" class="space-y-12"><!-- Projects injected by JS -->
+     <div id="projects-gamedev" class="space-y-12">
+      <!-- Projects injected by JS -->
      </div>
     </section><!-- Section 2: 3D Art -->
     <section id="3dart" class="scroll-mt-24 mb-20">
-     <div class="flex items-center gap-4 mb-10"><i data-lucide="box" class="w-6 h-6 text-sol-accent"></i>
+     <div class="flex items-center gap-4 mb-10">
+      <i data-lucide="box" class="w-6 h-6 text-sol-accent"></i>
       <h2 id="title-3d" class="text-sol-heading font-bold text-2xl">3D Modelling &amp; Art</h2>
      </div>
      <div class="section-divider mb-10"></div>
@@ -107,7 +117,8 @@
      </div>
     </section><!-- Section 3: Software -->
     <section id="software" class="scroll-mt-24 mb-20">
-     <div class="flex items-center gap-4 mb-10"><i data-lucide="terminal" class="w-6 h-6 text-sol-accent"></i>
+     <div class="flex items-center gap-4 mb-10">
+      <i data-lucide="terminal" class="w-6 h-6 text-sol-accent"></i>
       <h2 id="title-software" class="text-sol-heading font-bold text-2xl">Other Software</h2>
      </div>
      <div class="section-divider mb-10"></div>
@@ -266,7 +277,14 @@
       const contentDiv = document.createElement('div');
       contentDiv.className = 'md:w-1/2 flex flex-col justify-center';
       contentDiv.innerHTML = `
-        <div class="flex flex-wrap gap-1.5 mb-3">${tags}</div>
+        <div class="flex items-start justify-between gap-4 mb-3">
+          <div class="flex flex-wrap gap-1.5">${tags}</div>
+          ${project.downloadUrl ? `
+            <a href="${project.downloadUrl}" target="_blank" rel="noopener noreferrer" class="flex-shrink-0 w-8 h-8 rounded-lg bg-sol-surface/50 hover:bg-sol-accent/20 border border-sol-surface/50 hover:border-sol-accent/40 flex items-center justify-center transition-all duration-200 text-sol-text hover:text-sol-accent" title="Download">
+              <i data-lucide="download" class="w-4 h-4"></i>
+            </a>
+          ` : ''}
+        </div>
         <h3 class="text-sol-heading font-bold text-xl mb-3">${project.name}</h3>
         <p class="text-sol-text text-sm leading-relaxed">${project.description}</p>
       `;
@@ -441,3 +459,6 @@
     renderAllProjects();
     onConfigChange(defaultConfig);
     lucide.createIcons();
+  </script>
+  </body>
+</html>
