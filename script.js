@@ -28,7 +28,8 @@ const projectData = {
         { type: 'image', src: 'assets/GameDev/Space/4.png', label: 'Front View' },
         { type: 'image', src: 'assets/GameDev/Space/5.png', label: 'Front View' },
         { type: 'image', src: 'assets/GameDev/Space/6.png', label: 'Front View' },
-      ]
+      ],
+      downloadUrl: "https://jasinop.itch.io/spaceshi-captain"
     },
     {
       name: "Frenzypede",
@@ -317,7 +318,7 @@ const defaultConfig = {
   contact_email: 'pjasinop@gmail.com',
   contact_linkedin: 'https://www.linkedin.com/in/patrik-ja%C5%A1o-557150397/',
   contact_github: 'https://github.com/Jasinop',
-  contact_gitlab: 'https://gitlab.fi.muni.cz/xjaso',
+  contact_itchio: 'https://jasinop.itch.io/',
   contact_discord: 'https://discord.gg/tn7BnDWf',
   section_gamedev: 'Game Development & Design',
   section_3d: '3D Modelling & Art',
@@ -350,7 +351,7 @@ async function onConfigChange(config) {
   $('contact-email').href = `mailto:${emailVal}`;
   $('contact-linkedin').href = c.contact_linkedin || defaultConfig.contact_linkedin;
   $('contact-github').href = c.contact_github || defaultConfig.contact_github;
-  $('contact-gitlab').href = c.contact_gitlab || defaultConfig.contact_gitlab;
+  $('contact-itchio').href = c.contact_itchio || defaultConfig.contact_itchio;
   const discordVal = c.contact_discord || defaultConfig.contact_discord;
   $('contact-discord').href = discordVal.includes('http') ? discordVal : `https://discord.com/users/${discordVal}`;
 
