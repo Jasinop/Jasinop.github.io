@@ -18,11 +18,16 @@ const projectData = {
     },
     {
       name: "Spaceshi_ Captain",
-      description: "My first finished Unity project. Simple top-down space-shooter, with 3 levels, ship stat upgrades, and weapon upgrades. In the first level you only face meteors, in the second one enemy ships arrive, and the third one combines both ending with a boss fight. Also has an Android version with usable controls. Meant to be a simple intro GameDev project.",
+      description: "My first finished Unity project. Simple top-down space-shooter, with 3 levels, ship stat upgrades, and weapon upgrades. In the first level you only face meteors, in the second one enemy ships arrive, and the third one combines both ending with a boss fight. Also has an Android version with usable controls. Meant to be a simple intro GameDev project. All the models are made by me.",
       tags: ["Unity", "C#", "Arcade", "Space-shooter", "Solo Project"],
       media: [
-        { type: 'image', color: '#1a2a3a', label: 'Combat' },
-        { type: 'image', color: '#0f3545', label: 'Dungeon' },
+        { type: 'youtube', videoId: 'bvuPAoTLhUA', label: 'Front View' },
+        { type: 'image', src: 'assets/GameDev/Space/1.png', label: 'Front View' },
+        { type: 'image', src: 'assets/GameDev/Space/2.png', label: 'Front View' },
+        { type: 'image', src: 'assets/GameDev/Space/3.png', label: 'Front View' },
+        { type: 'image', src: 'assets/GameDev/Space/4.png', label: 'Front View' },
+        { type: 'image', src: 'assets/GameDev/Space/5.png', label: 'Front View' },
+        { type: 'image', src: 'assets/GameDev/Space/6.png', label: 'Front View' },
       ]
     },
     {
@@ -123,20 +128,15 @@ const projectData = {
     },
     {
       name: "Mystic Land - Walkable first person 3D scene showcasing various CG techniques",
-      description: "An application which allows the user to draw shapes with different properties, such as lights, walls and transparent objects, into a 2D scene. The application computes real-time global illumination for the dynamic 2D scene utilising its own rendering engine based on OpenGL. In order to compute global illumination, the Path Tracing algorithm is used together with several optimisation techniques. The Digital Differential Analyzer (DDA) algorithm is used to sample the scene during tracing and a Distance Map is utilised to skip over empty pixels. The application also offers a graphical user interface which allows: the setting of drawing and rendering related properties, accessing different visualisation modes, and saving/loading drawn scenes as images.",
+      description: "An application made without any existing game engine, rendering engine or physics engine. The goal was to work with low-level CG, everything is coded in C++ utilising OpenGL and simple shaders meant to showcase different CG techniques. Techniques I implemented include: environmental mapping with a skybox, normal mapping on the pavement, cone lights and fog simulation.",
       tags: ["C++", "OpenGL", "GLSL", "Environmental Mapping", "Low-level"],
       media: [
-        { type: 'image', color: '#0b2b3b', label: 'Interface' },
-        { type: 'image', color: '#162636', label: 'Node Graph' },
-      ]
-    },
-    {
-      name: "Recipe Browser - A simple full-stack application made using C# and WPF",
-      description: "An application which allows the user to draw shapes with different properties, such as lights, walls and transparent objects, into a 2D scene. The application computes real-time global illumination for the dynamic 2D scene utilising its own rendering engine based on OpenGL. In order to compute global illumination, the Path Tracing algorithm is used together with several optimisation techniques. The Digital Differential Analyzer (DDA) algorithm is used to sample the scene during tracing and a Distance Map is utilised to skip over empty pixels. The application also offers a graphical user interface which allows: the setting of drawing and rendering related properties, accessing different visualisation modes, and saving/loading drawn scenes as images.",
-      tags: ["C#", "WPF", "Full-stack", "Database setup"],
-      media: [
-        { type: 'image', color: '#0b2b3b', label: 'Interface' },
-        { type: 'image', color: '#162636', label: 'Node Graph' },
+        { type: 'youtube', videoId: 'f2nXK0ui0FU', label: 'Front View' },
+        { type: 'image', src: 'assets/Other/CGAPI/1.png', label: 'Interface' },
+        { type: 'image', src: 'assets/Other/CGAPI/2.png', label: 'Interface' },
+        { type: 'image', src: 'assets/Other/CGAPI/3.png', label: 'Interface' },
+        { type: 'image', src: 'assets/Other/CGAPI/4.png', label: 'Interface' },
+        { type: 'image', src: 'assets/Other/CGAPI/5.png', label: 'Interface' },
       ]
     },
   ],
