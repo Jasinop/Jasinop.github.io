@@ -36,18 +36,18 @@ const projectData = {
       description: "Nature is cruel and its only rule is kill or be killed, or rather eat or be eaten. You are a lonely centipede just hatching into this disastrous world and you have only 1 goal: BE THE BIGGEST CENTIPEDE THE WORLD HAS EVER SEEN! How will you achieve this? By eating every fruit in your path? Killing (mostly) harmless insects? Or perhaps even going after your sibling centipedes?",
       tags: ["Card Game", "nanDeck", "Party Game", "Team Project"],
       media: [
-        { type: 'image', color: '#1a2a3a', label: 'Combat' },
-        { type: 'image', color: '#0f3545', label: 'Dungeon' },
+        { type: 'image', src: 'assets/GameDev/Frenzypede/1.jpg', label: 'Front View' },
+        { type: 'image', src: 'assets/GameDev/Frenzypede/2.jpg', label: 'Front View' },
+        { type: 'image', src: 'assets/GameDev/Frenzypede/3.jpg', label: 'Front View' },
       ],
-      downloadUrl: 'https://github.com/Jasinop/Frenzypede/tree/playtest-print'
+      downloadUrl: 'https://github.com/Jasinop/Frenzypede/blob/playtest-print/frenzypede-print-compressed.pdf'
     },
     {
       name: "Lost in Minds - WIP",
       description: "Memory game, where you play as a forgetful dwarf moving through the hexagonal mines, looking for rare gem-pairs to dig up, finding helpful equipment on the way and lighting up important places you visited with a torch to not forget your path. You compete with other dwarfs to find the most gems by getting to the gem-pairs first and stealing partially claimed gems from your opponents. Make sure you don’t get lost by forgetting which tiles you explored, and don’t be afraid to confuse your opponents by lying about the layout of the mines.",
       tags: ["Board Game", "nanDeck", "Memory", "Team Project"],
       media: [
-        { type: 'image', color: '#1a2a3a', label: 'Combat' },
-        { type: 'image', color: '#0f3545', label: 'Dungeon' },
+        { type: 'image', color: '#1a2a3a', label: 'WIP' },
       ]
     },
   ],
