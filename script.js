@@ -11,9 +11,14 @@ const projectData = {
       description: "Fast-paced 2D action platformer game, where players must complete objectives as quickly as possible and try to optimize every level. Set in Japanese fantasy Sengoku period (1467 - 1603) you take on the role of a samurai wielding the cursed sword Swift Wind, who must fulfill his quest to lift the curse that binds him to the sword.",
       tags: ["Unity", "C#", "Action", "Platformer", "Speedrunning", "Team Project"],
       media: [
-        { type: 'image', color: '#0a3d4f', label: 'Main Menu' },
-        { type: 'image', color: '#0d4a5e', label: 'Gameplay' },
-        { type: 'video', color: '#103040', label: 'Trailer' },
+        { type: 'youtube', videoId: 'qRSlem80AvU', label: 'Front View' },
+        { type: 'image', src: 'assets/GameDev/Swift Wind/1.png', label: 'Front View' },
+        { type: 'image', src: 'assets/GameDev/Swift Wind/2.png', label: 'Front View' },
+        { type: 'image', src: 'assets/GameDev/Swift Wind/3.png', label: 'Front View' },
+        { type: 'image', src: 'assets/GameDev/Swift Wind/4.png', label: 'Front View' },
+        { type: 'image', src: 'assets/GameDev/Swift Wind/5.png', label: 'Front View' },
+        { type: 'image', src: 'assets/GameDev/Swift Wind/6.png', label: 'Front View' },
+        { type: 'image', src: 'assets/GameDev/Swift Wind/7.png', label: 'Front View' },
       ]
     },
     {
