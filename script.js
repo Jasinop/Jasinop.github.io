@@ -319,7 +319,7 @@ const defaultConfig = {
   contact_linkedin: 'https://www.linkedin.com/in/patrik-ja%C5%A1o-557150397/',
   contact_github: 'https://github.com/Jasinop',
   contact_itchio: 'https://jasinop.itch.io/',
-  contact_discord: 'https://discord.gg/tn7BnDWf',
+  contact_discord: 'https://discord.com/users/383933267021266957',
   section_gamedev: 'Game Development & Design',
   section_3d: '3D Modelling & Art',
   section_software: 'Other Software',
