@@ -134,7 +134,7 @@ const projectData = {
     },
     {
       name: "Mystic Land - Walkable first person 3D scene showcasing various CG techniques",
-      description: "An application made without any existing game engine, rendering engine or physics engine. The goal was to work with low-level CG, everything is coded in C++ utilising OpenGL and simple shaders meant to showcase different CG techniques. Techniques I implemented include: environmental mapping with a skybox, normal mapping on the pavement, cone lights and fog simulation.",
+      description: "An application made without any existing game engine, rendering engine or physics engine. The goal was to work with low-level CG, everything is coded in C++ utilising OpenGL and simple shaders meant to showcase different CG techniques. Techniques I implemented include: environmental mapping with a skybox, normal mapping on the pavement, cone lights and fog simulation. The assets present in the scene are mainly there to showcase the techniques, and they were not created by me.",
       tags: ["C++", "OpenGL", "GLSL", "Environmental Mapping", "Low-level"],
       media: [
         { type: 'youtube', videoId: 'f2nXK0ui0FU', label: 'Front View' },
