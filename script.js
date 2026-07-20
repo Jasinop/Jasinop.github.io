@@ -11,7 +11,7 @@ const projectData = {
       description: "Fast-paced 2D action platformer game, where players must complete objectives as quickly as possible and try to optimize every level. Set in Japanese fantasy Sengoku period (1467 - 1603) you take on the role of a samurai wielding the cursed sword Swift Wind, who must fulfill his quest to lift the curse that binds him to the sword.",
       tags: ["Unity", "C#", "Action", "Platformer", "Speedrunning", "Team Project"],
       media: [
-        { type: 'youtube', videoId: 'qRSlem80AvU', label: 'Front View' },
+        { type: 'youtube', videoId: 'r7xEnqCq0OU', label: 'Front View' },
         { type: 'image', src: 'assets/GameDev/Swift Wind/1.png', label: 'Front View' },
         { type: 'image', src: 'assets/GameDev/Swift Wind/2.png', label: 'Front View' },
         { type: 'image', src: 'assets/GameDev/Swift Wind/3.png', label: 'Front View' },
@@ -19,7 +19,11 @@ const projectData = {
         { type: 'image', src: 'assets/GameDev/Swift Wind/5.png', label: 'Front View' },
         { type: 'image', src: 'assets/GameDev/Swift Wind/6.png', label: 'Front View' },
         { type: 'image', src: 'assets/GameDev/Swift Wind/7.png', label: 'Front View' },
-      ]
+        { type: 'image', src: 'assets/GameDev/Swift Wind/8.png', label: 'Front View' },
+        { type: 'image', src: 'assets/GameDev/Swift Wind/9.png', label: 'Front View' },
+        { type: 'image', src: 'assets/GameDev/Swift Wind/10.png', label: 'Front View' },
+      ],
+      downloadUrl: "https://sirlukol.itch.io/swift-wind"
     },
     {
       name: "Spaceshi_ Captain",
@@ -48,15 +52,28 @@ const projectData = {
       downloadUrl: 'https://github.com/Jasinop/Frenzypede/blob/playtest-print/frenzypede-print-compressed.pdf'
     },
     {
-      name: "Lost in Minds - WIP",
+      name: "Lost in Minds",
       description: "Memory game, where you play as a forgetful dwarf moving through the hexagonal mines, looking for rare gem-pairs to dig up, finding helpful equipment on the way and lighting up important places you visited with a torch to not forget your path. You compete with other dwarfs to find the most gems by getting to the gem-pairs first and stealing partially claimed gems from your opponents. Make sure you don’t get lost by forgetting which tiles you explored, and don’t be afraid to confuse your opponents by lying about the layout of the mines.",
       tags: ["Board Game", "nanDeck", "Memory", "Team Project"],
       media: [
-        { type: 'image', color: '#1a2a3a', label: 'WIP' },
+        { type: 'image', src: 'assets/GameDev/Lost in Minds/1.png', label: 'Front View' },
       ]
     },
   ],
   "3d": [
+    {
+      name: "Steamed Mutton — Model a custom character",
+      description: "This is my most recent 3D modelling project. The character's name is Shaun Wooly and he is an aero-engineer in the steampunk era of a world populated by what we would call \"sheep-human hybrids\". Everything was made by me except the airship and HDRI map. Most of the materials were made procedurally using blender's node system and the wool/hair was made using geometry nodes. The character and shoes were sculpted and the rest of the clothing / accessories were made using standard polygonal modelling. The character is fully rigged, but still needs adjustments on the weights for the clothing to bend properly, thus the renders are in an A-pose.",
+      tags: ["Blender", "Sculpting", "Procedural Materials", "Geometry Nodes", "Character Design", "Rigging"],
+      media: [
+        { type: 'image', src: 'assets/Blender/SteamedMutton/1.png', label: 'Front View' },
+        { type: 'image', src: 'assets/Blender/SteamedMutton/2.png', label: 'Front View' },
+        { type: 'image', src: 'assets/Blender/SteamedMutton/3.png', label: 'Front View' },
+        { type: 'image', src: 'assets/Blender/SteamedMutton/4.png', label: 'Front View' },
+        { type: 'image', src: 'assets/Blender/SteamedMutton/5.png', label: 'Front View' },
+        { type: 'image', src: 'assets/Blender/SteamedMutton/6.png', label: 'Front View' },
+      ]
+    },
     {
       name: "Coffee Mill — Model a real world object",
       description: "A simple model I made for an assignment. The goal was to choose an object somewhere in the real world, gather reference images of it, and model it accurately according to the references. I used polygonal modelling for building the mesh, and very simple materials to get a similar look to the real one.",
